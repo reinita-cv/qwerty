@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Практика — Web-страницы и сайты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Onest:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">WEB<span>.</span>INFO</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="theory.html">Теория</a></li>
+      <li><a href="technologies.html">Технологии</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="practice.html" class="active">Практика</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-breadcrumb"><a href="index.html">Главная</a> / Практика</p>
+      <h1>Создание сайта<br />в VS Code</h1>
+      <p>Пошаговое руководство по разработке информационного сайта — от установки редактора до публикации готового проекта.</p>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+
+    <h2>4.1 Подготовка рабочего окружения</h2>
+    <p>Прежде чем приступить к созданию сайта, необходимо установить и настроить инструменты разработки.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Скачайте и установите VS Code</h4>
+          <p>Перейдите на официальный сайт <strong>code.visualstudio.com</strong>, выберите версию для вашей операционной системы (Windows / macOS / Linux) и установите редактор.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Установите расширение Live Server</h4>
+          <p>В VS Code откройте панель расширений (Ctrl+Shift+X), найдите «Live Server» и нажмите «Установить». Это расширение запускает локальный сервер с авто-обновлением при сохранении файлов.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Создайте папку проекта</h4>
+          <p>Создайте новую папку на диске (например, <code>my-website</code>). Откройте её в VS Code через меню <strong>Файл → Открыть папку</strong>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Создайте структуру файлов</h4>
+          <p>В папке проекта создайте файлы: <code>index.html</code>, <code>style.css</code>, <code>main.js</code> и подпапку <code>images/</code>.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Структура проекта:</h3>
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">СТРУКТУРА ФАЙЛОВ</span></div>
+      <pre><code>my-website/
+├── index.html          <span class="cm"># Главная страница</span>
+├── about.html          <span class="cm"># Страница «О нас»</span>
+├── articles.html       <span class="cm"># Страница статей</span>
+├── contact.html        <span class="cm"># Контакты</span>
+├── style.css           <span class="cm"># Общие стили</span>
+├── main.js             <span class="cm"># JavaScript</span>
+└── images/             <span class="cm"># Папка изображений</span>
+    ├── logo.png
+    └── hero-bg.jpg</code></pre>
+    </div>
+
+    <h2>4.2 Создание HTML-структуры</h2>
+    <p>Начнём с главного файла <code>index.html</code>. В VS Code создайте файл и введите <code>!</code>, затем нажмите Tab — редактор автоматически вставит базовый шаблон HTML5.</p>
+
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">index.html — Базовая структура</span></div>
+      <pre><code><span class="kw">&lt;!DOCTYPE html&gt;</span>
+<span class="kw">&lt;html</span> <span class="at">lang</span>=<span class="str">"ru"</span><span class="kw">&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+  <span class="kw">&lt;meta</span> <span class="at">charset</span>=<span class="str">"UTF-8"</span><span class="kw">/&gt;</span>
+  <span class="kw">&lt;meta</span> <span class="at">name</span>=<span class="str">"viewport"</span> <span class="at">content</span>=<span class="str">"width=device-width, initial-scale=1.0"</span><span class="kw">/&gt;</span>
+  <span class="kw">&lt;title&gt;</span>Мой информационный сайт<span class="kw">&lt;/title&gt;</span>
+  <span class="kw">&lt;link</span> <span class="at">rel</span>=<span class="str">"stylesheet"</span> <span class="at">href</span>=<span class="str">"style.css"</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+
+  <span class="cm">&lt;!-- Шапка сайта --&gt;</span>
+  <span class="kw">&lt;header</span> <span class="at">class</span>=<span class="str">"site-header"</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span> <span class="at">class</span>=<span class="str">"container"</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;a</span> <span class="at">href</span>=<span class="str">"index.html"</span> <span class="at">class</span>=<span class="str">"logo"</span><span class="kw">&gt;</span>МойСайт<span class="kw">&lt;/a&gt;</span>
+      <span class="kw">&lt;nav&gt;</span>
+        <span class="kw">&lt;ul&gt;</span>
+          <span class="kw">&lt;li&gt;&lt;a</span> <span class="at">href</span>=<span class="str">"index.html"</span><span class="kw">&gt;</span>Главная<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="kw">&lt;li&gt;&lt;a</span> <span class="at">href</span>=<span class="str">"articles.html"</span><span class="kw">&gt;</span>Статьи<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="kw">&lt;li&gt;&lt;a</span> <span class="at">href</span>=<span class="str">"about.html"</span><span class="kw">&gt;</span>О нас<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="kw">&lt;li&gt;&lt;a</span> <span class="at">href</span>=<span class="str">"contact.html"</span><span class="kw">&gt;</span>Контакты<span class="kw">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="kw">&lt;/ul&gt;</span>
+      <span class="kw">&lt;/nav&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+  <span class="kw">&lt;/header&gt;</span>
+
+  <span class="cm">&lt;!-- Главный контент --&gt;</span>
+  <span class="kw">&lt;main&gt;</span>
+    <span class="kw">&lt;section</span> <span class="at">class</span>=<span class="str">"hero"</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;h1&gt;</span>Добро пожаловать на сайт<span class="kw">&lt;/h1&gt;</span>
+      <span class="kw">&lt;p&gt;</span>Здесь вы найдёте полезную информацию.<span class="kw">&lt;/p&gt;</span>
+      <span class="kw">&lt;a</span> <span class="at">href</span>=<span class="str">"articles.html"</span> <span class="at">class</span>=<span class="str">"btn"</span><span class="kw">&gt;</span>Читать статьи<span class="kw">&lt;/a&gt;</span>
+    <span class="kw">&lt;/section&gt;</span>
+  <span class="kw">&lt;/main&gt;</span>
+
+  <span class="cm">&lt;!-- Подвал --&gt;</span>
+  <span class="kw">&lt;footer&gt;</span>
+    <span class="kw">&lt;p&gt;</span>© 2026 МойСайт. Все права защищены.<span class="kw">&lt;/p&gt;</span>
+  <span class="kw">&lt;/footer&gt;</span>
+
+  <span class="kw">&lt;script</span> <span class="at">src</span>=<span class="str">"main.js"</span><span class="kw">&gt;&lt;/script&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+    </div>
+
+    <h2>4.3 Написание CSS-стилей</h2>
+    <p>В файле <code>style.css</code> задаём внешний вид сайта. Начинаем с обнуления стандартных стилей браузера и определения глобальных переменных.</p>
+
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">style.css — Основные стили</span></div>
+      <pre><code><span class="cm">/* Обнуление и базовые стили */</span>
+<span class="kw">*</span>, <span class="kw">*::before</span>, <span class="kw">*::after</span> {
+  <span class="at">box-sizing:</span> <span class="str">border-box</span>;
+  <span class="at">margin:</span> <span class="str">0</span>;
+  <span class="at">padding:</span> <span class="str">0</span>;
+}
+
+<span class="cm">/* CSS-переменные для единого стиля */</span>
+<span class="kw">:root</span> {
+  <span class="at">--color-primary:</span>    <span class="str">#2563eb</span>;
+  <span class="at">--color-bg:</span>         <span class="str">#ffffff</span>;
+  <span class="at">--color-text:</span>       <span class="str">#1e293b</span>;
+  <span class="at">--color-muted:</span>      <span class="str">#64748b</span>;
+  <span class="at">--font-main:</span>        <span class="str">'Segoe UI', sans-serif</span>;
+  <span class="at">--container-width:</span>  <span class="str">1100px</span>;
+  <span class="at">--radius:</span>           <span class="str">8px</span>;
+}
+
+<span class="kw">body</span> {
+  <span class="at">font-family:</span>  <span class="str">var(--font-main)</span>;
+  <span class="at">color:</span>        <span class="str">var(--color-text)</span>;
+  <span class="at">line-height:</span>  <span class="str">1.6</span>;
+  <span class="at">background:</span>   <span class="str">var(--color-bg)</span>;
+}
+
+<span class="cm">/* Контейнер для центрирования */</span>
+<span class="kw">.container</span> {
+  <span class="at">max-width:</span> <span class="str">var(--container-width)</span>;
+  <span class="at">margin:</span>    <span class="str">0 auto</span>;
+  <span class="at">padding:</span>   <span class="str">0 1.5rem</span>;
+}
+
+<span class="cm">/* Шапка сайта */</span>
+<span class="kw">.site-header</span> {
+  <span class="at">background:</span>     <span class="str">var(--color-primary)</span>;
+  <span class="at">padding:</span>        <span class="str">1rem 0</span>;
+  <span class="at">position:</span>       <span class="str">sticky</span>;
+  <span class="at">top:</span>            <span class="str">0</span>;
+  <span class="at">z-index:</span>        <span class="str">100</span>;
+}
+
+<span class="cm">/* Адаптивная сетка карточек */</span>
+<span class="kw">.cards-grid</span> {
+  <span class="at">display:</span>                <span class="str">grid</span>;
+  <span class="at">grid-template-columns:</span>  <span class="str">repeat(auto-fit, minmax(280px, 1fr))</span>;
+  <span class="at">gap:</span>                    <span class="str">1.5rem</span>;
+}
+
+<span class="cm">/* Адаптивность */</span>
+<span class="kw">@media (max-width: 600px)</span> {
+  <span class="kw">.site-header nav</span> {
+    <span class="at">display:</span> <span class="str">none</span>; <span class="cm">/* скрываем на мобильных */</span>
+  }
+}</code></pre>
+    </div>
+
+    <h2>4.4 Добавление интерактивности (JavaScript)</h2>
+    <p>В файле <code>main.js</code> реализуем интерактивные элементы: мобильное меню, плавную прокрутку и форму обратной связи.</p>
+
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">main.js — Интерактивность</span></div>
+      <pre><code><span class="cm">// Мобильное меню (бургер-кнопка)</span>
+<span class="kw">const</span> <span class="cn">burger</span> = document.getElementById(<span class="str">'burger'</span>);
+<span class="kw">const</span> <span class="cn">navMenu</span> = document.getElementById(<span class="str">'navMenu'</span>);
+
+burger.addEventListener(<span class="str">'click'</span>, () => {
+  navMenu.classList.toggle(<span class="str">'open'</span>);
+});
+
+<span class="cm">// Закрываем меню при клике на ссылку</span>
+document.querySelectorAll(<span class="str">'.nav-link'</span>).forEach(link => {
+  link.addEventListener(<span class="str">'click'</span>, () => {
+    navMenu.classList.remove(<span class="str">'open'</span>);
+  });
+});
+
+<span class="cm">// Плавное появление элементов при скролле</span>
+<span class="kw">const</span> <span class="cn">observer</span> = <span class="kw">new</span> IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    <span class="kw">if</span> (entry.isIntersecting) {
+      entry.target.classList.add(<span class="str">'visible'</span>);
+    }
+  });
+}, { threshold: <span class="str">0.1</span> });
+
+document.querySelectorAll(<span class="str">'.fade-in'</span>).forEach(el => {
+  observer.observe(el);
+});
+
+<span class="cm">// Форма обратной связи</span>
+<span class="kw">const</span> <span class="cn">contactForm</span> = document.getElementById(<span class="str">'contactForm'</span>);
+
+<span class="kw">if</span> (contactForm) {
+  contactForm.addEventListener(<span class="str">'submit'</span>, <span class="kw">function</span>(e) {
+    e.preventDefault();
+
+    <span class="kw">const</span> <span class="cn">name</span> = document.getElementById(<span class="str">'name'</span>).value.trim();
+    <span class="kw">const</span> <span class="cn">email</span> = document.getElementById(<span class="str">'email'</span>).value.trim();
+
+    <span class="kw">if</span> (!name || !email) {
+      alert(<span class="str">'Пожалуйста, заполните все поля'</span>);
+      <span class="kw">return</span>;
+    }
+
+    console.log(<span class="str">`Отправлено: ${name}, ${email}`</span>);
+    alert(<span class="str">'Сообщение отправлено! Спасибо.'</span>);
+    contactForm.reset();
+  });
+}</code></pre>
+    </div>
+
+    <h2>4.5 Тестирование сайта</h2>
+    <p>После написания кода необходимо провести комплексное тестирование.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Запустите Live Server</h4>
+          <p>Правой кнопкой мыши кликните на файл <code>index.html</code> в VS Code и выберите «Open with Live Server». Сайт откроется по адресу <code>http://127.0.0.1:5500</code>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Проверьте кроссбраузерность</h4>
+          <p>Откройте сайт в Chrome, Firefox, Edge и Safari. Убедитесь, что все элементы отображаются корректно.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Проверьте адаптивность</h4>
+          <p>В Chrome DevTools (F12) откройте режим «Toggle device toolbar» (Ctrl+Shift+M) и проверьте отображение на смартфоне и планшете.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Валидация кода</h4>
+          <p>Проверьте HTML на сайте <strong>validator.w3.org</strong>, CSS — на <strong>jigsaw.w3.org/css-validator</strong>. Исправьте все найденные ошибки.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Публикация</h4>
+          <p>Загрузите файлы на хостинг (например, через GitHub Pages или Netlify). Настройте домен и SSL-сертификат для безопасного соединения HTTPS.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>💡 Рекомендация:</strong> При публикации на GitHub Pages достаточно создать репозиторий, загрузить файлы и включить GitHub Pages в настройках. Сайт станет доступен по адресу <code>username.github.io/repository-name</code> — бесплатно и без настройки сервера.
+    </div>
+
+    <h2>4.6 Рекомендации по дальнейшему развитию</h2>
+    <ul>
+      <li>Подключите Google Analytics для отслеживания посещаемости</li>
+      <li>Оптимизируйте изображения (формат WebP, сжатие)</li>
+      <li>Настройте мета-теги для SEO: <code>&lt;meta name="description"&gt;</code>, Open Graph</li>
+      <li>Добавьте файл <code>sitemap.xml</code> для поисковых систем</li>
+      <li>Настройте файл <code>robots.txt</code></li>
+      <li>Регулярно обновляйте контент для поддержания актуальности</li>
+    </ul>
+
+  </div>
+
+  <div class="page-nav">
+    <a href="tools.html">
+      <span class="page-nav-label">← Назад</span>
+      <span class="page-nav-title">Инструменты</span>
+    </a>
+    <a href="about.html" class="next">
+      <span class="page-nav-label">Вперёд →</span>
+      <span class="page-nav-title">О проекте</span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">WEB<span>.</span>INFO</div>
+      <nav class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="theory.html">Теория</a>
+        <a href="technologies.html">Технологии</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="practice.html">Практика</a>
+        <a href="about.html">О проекте</a>
+      </nav>
+      <p class="footer-copy">© 2026 · Курсовая работа · Web-страницы и сайты</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

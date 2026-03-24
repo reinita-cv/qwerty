@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Инструменты — Web-страницы и сайты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Onest:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">WEB<span>.</span>INFO</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="theory.html">Теория</a></li>
+      <li><a href="technologies.html">Технологии</a></li>
+      <li><a href="tools.html" class="active">Инструменты</a></li>
+      <li><a href="practice.html">Практика</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-breadcrumb"><a href="index.html">Главная</a> / Инструменты</p>
+      <h1>Программное<br />обеспечение</h1>
+      <p>Обзор редакторов кода, IDE и вспомогательных инструментов для создания качественных веб-сайтов.</p>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+
+    <h2>3.1 Редакторы кода и IDE</h2>
+    <p>Редактор кода — основной инструмент веб-разработчика. Он должен поддерживать подсветку синтаксиса, автодополнение, интеграцию с системами контроля версий и иметь возможность расширения через плагины.</p>
+
+    <div class="tool-list">
+
+      <div class="tool-card">
+        <div class="tool-icon">🔵</div>
+        <div class="tool-info">
+          <h4>Visual Studio Code</h4>
+          <p>Бесплатный редактор кода от Microsoft. Лёгкий, быстрый и мощный. Поддерживает все популярные языки веб-разработки. Имеет огромную экосистему расширений (более 30 000 в маркетплейсе).</p>
+          <div class="tool-tags">
+            <span class="tag green">Бесплатно</span>
+            <span class="tag">Windows / macOS / Linux</span>
+            <span class="tag">Open Source</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🟣</div>
+        <div class="tool-info">
+          <h4>Visual Studio</h4>
+          <p>Полноценная интегрированная среда разработки (IDE) от Microsoft. Подходит для крупных проектов. Включает компиляторы, дизайнер форм, отладчик уровня машинного кода и инструменты командной разработки.</p>
+          <div class="tool-tags">
+            <span class="tag green">Community — бесплатно</span>
+            <span class="tag">Windows / macOS</span>
+            <span class="tag orange">Тяжёлый</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🟠</div>
+        <div class="tool-info">
+          <h4>WebStorm</h4>
+          <p>IDE от JetBrains, специализированная для JavaScript, HTML и CSS. Предлагает интеллектуальные средства кодирования, мощный рефакторинг и глубокую интеграцию с фреймворками.</p>
+          <div class="tool-tags">
+            <span class="tag orange">Платно (есть trial)</span>
+            <span class="tag">Windows / macOS / Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">⚫</div>
+        <div class="tool-info">
+          <h4>Sublime Text</h4>
+          <p>Лёгкий и очень быстрый текстовый редактор. Популярен среди разработчиков за скорость работы и широкие возможности кастомизации через плагины. Отлично подходит для небольших проектов.</p>
+          <div class="tool-tags">
+            <span class="tag orange">Условно бесплатно</span>
+            <span class="tag">Windows / macOS / Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🔴</div>
+        <div class="tool-info">
+          <h4>Brackets</h4>
+          <p>Редактор кода от Adobe, ориентированный на веб-разработку. Отличительная черта — Live Preview: изменения кода мгновенно отражаются в браузере без перезагрузки страницы.</p>
+          <div class="tool-tags">
+            <span class="tag green">Бесплатно</span>
+            <span class="tag">Windows / macOS / Linux</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>3.2 Visual Studio Code — детальный обзор</h2>
+    <p>VS Code является рекомендуемым инструментом для данного проекта. Рассмотрим его ключевые функции подробно.</p>
+
+    <h3>Основные возможности VS Code:</h3>
+    <div class="tech-grid">
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🎨</span><span class="tech-badge-name">Подсветка синтаксиса</span></div>
+        <p>Функции, классы, переменные и другие элементы кода выделяются разными цветами для удобства чтения.</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">✨</span><span class="tech-badge-name">IntelliSense</span></div>
+        <p>Умное автодополнение, подсказки по параметрам и документация прямо в редакторе.</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🐛</span><span class="tech-badge-name">Отладчик</span></div>
+        <p>Встроенная отладка для JavaScript, TypeScript и других языков с точками останова.</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🔀</span><span class="tech-badge-name">Git-интеграция</span></div>
+        <p>Управление версиями прямо в редакторе: просмотр изменений, коммиты, ветки.</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">📦</span><span class="tech-badge-name">Расширения</span></div>
+        <p>Более 30 000 расширений для любых задач: темы, форматтеры, линтеры, дебаггеры.</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🖥️</span><span class="tech-badge-name">Терминал</span></div>
+        <p>Встроенный терминал позволяет выполнять команды, не переключаясь из редактора.</p>
+      </div>
+    </div>
+
+    <h3>Структура интерфейса VS Code:</h3>
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">СТРУКТУРА ИНТЕРФЕЙСА</span></div>
+      <pre><code>┌─────────────────────────────────────────────────────┐
+│  СТРОКА МЕНЮ: Файл / Правка / Выбор / Вид / ...     │
+├──────┬──────────────────────────────────┬────────────┤
+│      │                                  │            │
+│  БО  │     РЕДАКТОР КОДА                │  ПАНЕЛЬ    │
+│  КО  │  (основная рабочая область)      │  ПРОБЛЕМ   │
+│  ВА  │                                  │  И         │
+│  Я   │  index.html  ×  style.css  ×     │  РАСШИР.   │
+│  ПА  │  ─────────────────────────────   │            │
+│  НЕ  │  &lt;!DOCTYPE html&gt;                 │            │
+│  ЛЬ  │  &lt;html lang="ru"&gt;               │            │
+│      │    &lt;head&gt;...                     │            │
+│  📁  │    &lt;body&gt;...                     │            │
+│  🔍  │                                  │            │
+│  🔀  ├──────────────────────────────────┤            │
+│  🧩  │  ВСТРОЕННЫЙ ТЕРМИНАЛ             │            │
+│      │  $ npm start                     │            │
+├──────┴──────────────────────────────────┴────────────┤
+│  СТРОКА СОСТОЯНИЯ: ветка Git · ошибки · кодировка   │
+└─────────────────────────────────────────────────────┘</code></pre>
+    </div>
+
+    <h3>Рекомендуемые расширения для веб-разработки:</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Расширение</th><th>Назначение</th><th>Оценка</th></tr></thead>
+        <tbody>
+          <tr><td>Live Server</td><td>Локальный сервер с авто-перезагрузкой</td><td class="td-good">★★★★★</td></tr>
+          <tr><td>Prettier</td><td>Автоматическое форматирование кода</td><td class="td-good">★★★★★</td></tr>
+          <tr><td>ESLint</td><td>Проверка JavaScript на ошибки</td><td class="td-good">★★★★★</td></tr>
+          <tr><td>HTML CSS Support</td><td>Автодополнение CSS-классов в HTML</td><td class="td-good">★★★★☆</td></tr>
+          <tr><td>GitLens</td><td>Расширенная работа с Git</td><td class="td-good">★★★★☆</td></tr>
+          <tr><td>Auto Rename Tag</td><td>Автоматическое переименование тегов</td><td class="td-mid">★★★★☆</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>3.3 Вспомогательные инструменты</h2>
+
+    <div class="tool-list">
+      <div class="tool-card">
+        <div class="tool-icon">🎨</div>
+        <div class="tool-info">
+          <h4>Figma</h4>
+          <p>Инструмент для проектирования пользовательских интерфейсов и прототипирования. Применяется на этапе дизайна: создание макетов страниц до их верстки. Работает в браузере, без установки.</p>
+          <div class="tool-tags">
+            <span class="tag green">Бесплатный план</span>
+            <span class="tag">Браузер / Desktop</span>
+          </div>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🌐</div>
+        <div class="tool-info">
+          <h4>Chrome DevTools</h4>
+          <p>Встроенные инструменты разработчика в браузере Google Chrome. Позволяют инспектировать HTML/CSS, отлаживать JavaScript, анализировать производительность и тестировать адаптивность.</p>
+          <div class="tool-tags">
+            <span class="tag green">Встроено в браузер</span>
+            <span class="tag">F12 для открытия</span>
+          </div>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🐙</div>
+        <div class="tool-info">
+          <h4>Git / GitHub</h4>
+          <p>Система контроля версий для отслеживания изменений в коде и командной работы. GitHub предоставляет хостинг репозиториев и дополнительные инструменты: GitHub Pages для публикации сайтов.</p>
+          <div class="tool-tags">
+            <span class="tag green">Бесплатно</span>
+            <span class="tag">GitHub Pages — хостинг</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>3.4 Сравнение редакторов</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Критерий</th><th>VS Code</th><th>Visual Studio</th><th>WebStorm</th><th>Sublime Text</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Цена</td><td class="td-good">Бесплатно</td><td class="td-good">Community free</td><td class="td-bad">Платно</td><td class="td-mid">Условно бесплатно</td></tr>
+          <tr><td>Скорость запуска</td><td class="td-good">Быстро</td><td class="td-bad">Медленно</td><td class="td-mid">Средне</td><td class="td-good">Быстро</td></tr>
+          <tr><td>Для веб</td><td class="td-good">Отлично</td><td class="td-mid">Хорошо</td><td class="td-good">Отлично</td><td class="td-mid">Хорошо</td></tr>
+          <tr><td>Расширения</td><td class="td-good">30 000+</td><td class="td-good">Много</td><td class="td-mid">Встроены</td><td class="td-mid">Есть</td></tr>
+          <tr><td>Порог входа</td><td class="td-good">Низкий</td><td class="td-bad">Высокий</td><td class="td-mid">Средний</td><td class="td-good">Низкий</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <strong>✅ Вывод:</strong> Для разработки информационного сайта рекомендуется <strong>Visual Studio Code</strong>. Это обусловлено удобным интерфейсом, богатой экосистемой расширений, бесплатностью и широкой поддержкой всех необходимых технологий.
+    </div>
+
+  </div>
+
+  <div class="page-nav">
+    <a href="technologies.html">
+      <span class="page-nav-label">← Назад</span>
+      <span class="page-nav-title">Технологии</span>
+    </a>
+    <a href="practice.html" class="next">
+      <span class="page-nav-label">Вперёд →</span>
+      <span class="page-nav-title">Практика</span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">WEB<span>.</span>INFO</div>
+      <nav class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="theory.html">Теория</a>
+        <a href="technologies.html">Технологии</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="practice.html">Практика</a>
+        <a href="about.html">О проекте</a>
+      </nav>
+      <p class="footer-copy">© 2026 · Курсовая работа · Web-страницы и сайты</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

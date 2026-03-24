@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web-страницы и сайты — Главная</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Onest:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">WEB<span>.</span>INFO</a>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Главная</a></li>
+      <li><a href="theory.html">Теория</a></li>
+      <li><a href="technologies.html">Технологии</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="practice.html">Практика</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">Информационный сайт · Курсовая работа</p>
+      <h1 class="hero-title">Web‑страницы<br /><span class="accent">и сайты</span></h1>
+      <p class="hero-sub">Современные методологии, инструменты и технологии проектирования и реализации информационных веб-ресурсов</p>
+      <div class="hero-btns">
+        <a href="theory.html" class="btn btn-primary">Начать изучение</a>
+        <a href="about.html" class="btn btn-ghost">О проекте</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">index.html</span>
+        </div>
+        <pre class="code-body"><code><span class="ct">&lt;!DOCTYPE html&gt;</span>
+<span class="ct">&lt;html</span> <span class="ca">lang</span>=<span class="cv">"ru"</span><span class="ct">&gt;</span>
+  <span class="ct">&lt;head&gt;</span>
+    <span class="ct">&lt;title&gt;</span><span class="cx">Web-сайт</span><span class="ct">&lt;/title&gt;</span>
+  <span class="ct">&lt;/head&gt;</span>
+  <span class="ct">&lt;body&gt;</span>
+    <span class="ct">&lt;h1&gt;</span><span class="cx">Привет, мир!</span><span class="ct">&lt;/h1&gt;</span>
+    <span class="ct">&lt;p&gt;</span><span class="cx">Это мой первый сайт</span><span class="ct">&lt;/p&gt;</span>
+  <span class="ct">&lt;/body&gt;</span>
+<span class="ct">&lt;/html&gt;</span></code></pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats-strip">
+    <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">разделов</span></div>
+    <div class="stat-div"></div>
+    <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">языка разработки</span></div>
+    <div class="stat-div"></div>
+    <div class="stat-item"><span class="stat-num">7+</span><span class="stat-label">инструментов</span></div>
+    <div class="stat-div"></div>
+    <div class="stat-item"><span class="stat-num">2026</span><span class="stat-label">год создания</span></div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="cards-section">
+    <div class="section-header">
+      <span class="section-tag">Содержание сайта</span>
+      <h2>Что вы найдёте здесь</h2>
+      <p>Структурированная информация по всем ключевым аспектам веб-разработки</p>
+    </div>
+    <div class="cards-grid">
+      <a href="theory.html" class="card card--blue">
+        <div class="card-icon">📖</div>
+        <h3>Теория</h3>
+        <p>Понятия веб-страниц и сайтов, классификация, структура и основные характеристики</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="technologies.html" class="card card--teal">
+        <div class="card-icon">⚙️</div>
+        <h3>Технологии</h3>
+        <p>HTML5, CSS3, JavaScript — основа современной веб-разработки, синтаксис и примеры</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="tools.html" class="card card--violet">
+        <div class="card-icon">🛠️</div>
+        <h3>Инструменты</h3>
+        <p>Обзор редакторов кода, IDE и вспомогательных программ: VS Code, Visual Studio и другие</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="practice.html" class="card card--orange">
+        <div class="card-icon">💻</div>
+        <h3>Практика</h3>
+        <p>Пошаговое создание сайта в Visual Studio Code: от структуры до публикации</p>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- TIMELINE PREVIEW -->
+  <section class="timeline-section">
+    <div class="section-header">
+      <span class="section-tag">Этапы разработки</span>
+      <h2>Путь от идеи до сайта</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-num">01</div>
+        <div class="tl-content">
+          <h4>Техническое задание</h4>
+          <p>Определение целей, аудитории и функциональных требований</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">02</div>
+        <div class="tl-content">
+          <h4>Прототипирование</h4>
+          <p>Создание структуры страниц и прорисовка навигации</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">03</div>
+        <div class="tl-content">
+          <h4>Дизайн и вёрстка</h4>
+          <p>HTML5, CSS3, адаптивная разметка страниц</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">04</div>
+        <div class="tl-content">
+          <h4>Интерактивность</h4>
+          <p>JavaScript — анимации, формы, динамический контент</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">05</div>
+        <div class="tl-content">
+          <h4>Тестирование</h4>
+          <p>Проверка в браузерах, валидация кода, адаптивность</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">06</div>
+        <div class="tl-content">
+          <h4>Публикация</h4>
+          <p>Хостинг, домен, SSL-сертификат</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Готовы начать изучение?</h2>
+    <p>Погрузитесь в мир веб-разработки — от базовых понятий до практической реализации</p>
+    <a href="theory.html" class="btn btn-primary">Перейти к теории →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">WEB<span>.</span>INFO</div>
+      <nav class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="theory.html">Теория</a>
+        <a href="technologies.html">Технологии</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="practice.html">Практика</a>
+        <a href="about.html">О проекте</a>
+      </nav>
+      <p class="footer-copy">© 2026 · Курсовая работа · Web-страницы и сайты</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

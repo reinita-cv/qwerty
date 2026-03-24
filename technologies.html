@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Технологии — Web-страницы и сайты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Onest:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">WEB<span>.</span>INFO</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="theory.html">Теория</a></li>
+      <li><a href="technologies.html" class="active">Технологии</a></li>
+      <li><a href="tools.html">Инструменты</a></li>
+      <li><a href="practice.html">Практика</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-breadcrumb"><a href="index.html">Главная</a> / Технологии</p>
+      <h1>Технологии<br />веб-разработки</h1>
+      <p>HTML5, CSS3 и JavaScript — три кита, на которых стоит весь современный веб. Разберём каждый из них подробно.</p>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+
+    <div class="tech-grid" style="margin-bottom:2.5rem">
+      <div class="tech-badge" style="border-color:rgba(240,98,146,0.3)">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🟧</span><span class="tech-badge-name">HTML5</span></div>
+        <p>Структура и разметка страниц. Язык гипертекстовой разметки.</p>
+      </div>
+      <div class="tech-badge" style="border-color:rgba(79,156,249,0.3)">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🔵</span><span class="tech-badge-name">CSS3</span></div>
+        <p>Оформление и стилизация. Каскадные таблицы стилей.</p>
+      </div>
+      <div class="tech-badge" style="border-color:rgba(255,169,77,0.3)">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🟡</span><span class="tech-badge-name">JavaScript</span></div>
+        <p>Интерактивность и динамика. Язык программирования для браузера.</p>
+      </div>
+    </div>
+
+    <h2>2.1 HTML5 — язык разметки</h2>
+    <p><strong>HTML (HyperText Markup Language)</strong> — стандартный язык разметки для создания веб-страниц. Версия HTML5 была принята в 2014 году и стала главным стандартом.</p>
+    <p>HTML определяет <em>структуру</em> страницы: заголовки, абзацы, списки, изображения, ссылки, таблицы и формы. Каждый элемент описывается тегами.</p>
+
+    <h3>Базовая структура HTML-документа:</h3>
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">HTML</span></div>
+      <pre><code><span class="cm">&lt;!-- Объявление типа документа --&gt;</span>
+<span class="kw">&lt;!DOCTYPE html&gt;</span>
+<span class="kw">&lt;html</span> <span class="at">lang</span>=<span class="str">"ru"</span><span class="kw">&gt;</span>
+
+<span class="kw">&lt;head&gt;</span>
+  <span class="cm">&lt;!-- Мета-информация --&gt;</span>
+  <span class="kw">&lt;meta</span> <span class="at">charset</span>=<span class="str">"UTF-8"</span><span class="kw"> /&gt;</span>
+  <span class="kw">&lt;meta</span> <span class="at">name</span>=<span class="str">"viewport"</span> <span class="at">content</span>=<span class="str">"width=device-width, initial-scale=1.0"</span><span class="kw"> /&gt;</span>
+  <span class="kw">&lt;title&gt;</span>Название страницы<span class="kw">&lt;/title&gt;</span>
+  <span class="kw">&lt;link</span> <span class="at">rel</span>=<span class="str">"stylesheet"</span> <span class="at">href</span>=<span class="str">"style.css"</span><span class="kw"> /&gt;</span>
+<span class="kw">&lt;/head&gt;</span>
+
+<span class="kw">&lt;body&gt;</span>
+  <span class="cm">&lt;!-- Видимое содержимое страницы --&gt;</span>
+  <span class="kw">&lt;header&gt;</span>
+    <span class="kw">&lt;h1&gt;</span>Заголовок сайта<span class="kw">&lt;/h1&gt;</span>
+    <span class="kw">&lt;nav&gt;</span>...<span class="kw">&lt;/nav&gt;</span>
+  <span class="kw">&lt;/header&gt;</span>
+
+  <span class="kw">&lt;main&gt;</span>
+    <span class="kw">&lt;section&gt;</span>
+      <span class="kw">&lt;h2&gt;</span>Раздел<span class="kw">&lt;/h2&gt;</span>
+      <span class="kw">&lt;p&gt;</span>Текстовый контент.<span class="kw">&lt;/p&gt;</span>
+    <span class="kw">&lt;/section&gt;</span>
+  <span class="kw">&lt;/main&gt;</span>
+
+  <span class="kw">&lt;footer&gt;</span>Подвал сайта<span class="kw">&lt;/footer&gt;</span>
+  <span class="kw">&lt;script</span> <span class="at">src</span>=<span class="str">"main.js"</span><span class="kw">&gt;&lt;/script&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+    </div>
+
+    <h3>Семантические теги HTML5:</h3>
+    <p>HTML5 ввёл семантические теги, которые описывают смысл содержимого, а не только его внешний вид. Это улучшает доступность и SEO.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Тег</th><th>Назначение</th><th>Пример использования</th></tr></thead>
+        <tbody>
+          <tr><td><code>&lt;header&gt;</code></td><td>Шапка страницы или раздела</td><td>Логотип и навигация</td></tr>
+          <tr><td><code>&lt;nav&gt;</code></td><td>Навигационные ссылки</td><td>Меню сайта</td></tr>
+          <tr><td><code>&lt;main&gt;</code></td><td>Основное содержимое</td><td>Центральная часть страницы</td></tr>
+          <tr><td><code>&lt;section&gt;</code></td><td>Тематический раздел</td><td>Блок с контентом</td></tr>
+          <tr><td><code>&lt;article&gt;</code></td><td>Самостоятельная статья</td><td>Пост блога, новость</td></tr>
+          <tr><td><code>&lt;aside&gt;</code></td><td>Боковая панель</td><td>Виджеты, реклама</td></tr>
+          <tr><td><code>&lt;footer&gt;</code></td><td>Подвал страницы</td><td>Копирайт, контакты</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>2.2 CSS3 — каскадные таблицы стилей</h2>
+    <p><strong>CSS (Cascading Style Sheets)</strong> определяет <em>внешний вид</em> HTML-элементов: цвета, шрифты, отступы, размеры, анимации и адаптивность. CSS3 — актуальная версия стандарта.</p>
+
+    <h3>Пример стилизации навигации:</h3>
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">CSS</span></div>
+      <pre><code><span class="cm">/* CSS-переменные (кастомные свойства) */</span>
+<span class="kw">:root</span> {
+  <span class="at">--color-primary:</span> <span class="str">#4f9cf9</span>;
+  <span class="at">--font-main:</span> <span class="str">'Onest', sans-serif</span>;
+  <span class="at">--radius:</span> <span class="str">12px</span>;
+}
+
+<span class="cm">/* Навигационная панель */</span>
+<span class="kw">.navbar</span> {
+  <span class="at">display:</span> <span class="str">flex</span>;
+  <span class="at">align-items:</span> <span class="str">center</span>;
+  <span class="at">justify-content:</span> <span class="str">space-between</span>;
+  <span class="at">padding:</span> <span class="str">0 2rem</span>;
+  <span class="at">background:</span> <span class="str">#0a0d14</span>;
+  <span class="at">height:</span> <span class="str">64px</span>;
+  <span class="at">position:</span> <span class="str">fixed</span>;
+  <span class="at">top:</span> <span class="str">0</span>;
+  <span class="at">width:</span> <span class="str">100%</span>;
+}
+
+<span class="cm">/* Адаптивность для мобильных */</span>
+<span class="kw">@media (max-width: 680px)</span> {
+  <span class="kw">.navbar</span> {
+    <span class="at">padding:</span> <span class="str">0 1rem</span>;
+  }
+}</code></pre>
+    </div>
+
+    <h3>Ключевые возможности CSS3:</h3>
+    <ul>
+      <li><strong>Flexbox</strong> — гибкая однострочная/многострочная раскладка элементов</li>
+      <li><strong>CSS Grid</strong> — двумерная сетка для сложных макетов</li>
+      <li><strong>Media Queries</strong> — адаптивность под разные экраны</li>
+      <li><strong>CSS-переменные</strong> — хранение и переиспользование значений</li>
+      <li><strong>Анимации и transitions</strong> — плавные изменения свойств</li>
+      <li><strong>CSS-фильтры и трансформации</strong> — визуальные эффекты</li>
+    </ul>
+
+    <h2>2.3 JavaScript — язык программирования</h2>
+    <p><strong>JavaScript</strong> — единственный язык программирования, нативно поддерживаемый браузерами. Он обеспечивает интерактивность: реакцию на действия пользователя, динамическое изменение страницы, работу с формами и запросы к серверу.</p>
+
+    <h3>Пример: обработка формы обратной связи:</h3>
+    <div class="codeblock">
+      <div class="codeblock-header"><span class="codeblock-lang">JavaScript</span></div>
+      <pre><code><span class="cm">// Получаем элементы формы</span>
+<span class="kw">const</span> <span class="cn">form</span> = document.querySelector(<span class="str">'#contactForm'</span>);
+<span class="kw">const</span> <span class="cn">nameInput</span> = document.querySelector(<span class="str">'#name'</span>);
+
+<span class="cm">// Слушаем событие отправки формы</span>
+form.addEventListener(<span class="str">'submit'</span>, <span class="kw">function</span>(event) {
+  event.preventDefault(); <span class="cm">// отменяем стандартное поведение</span>
+
+  <span class="kw">const</span> <span class="cn">name</span> = nameInput.value.trim();
+
+  <span class="kw">if</span> (name === <span class="str">''</span>) {
+    alert(<span class="str">'Пожалуйста, введите ваше имя'</span>);
+    <span class="kw">return</span>;
+  }
+
+  <span class="cm">// Динамически добавляем сообщение</span>
+  <span class="kw">const</span> <span class="cn">msg</span> = document.createElement(<span class="str">'p'</span>);
+  msg.textContent = <span class="str">`Спасибо, ${name}! Мы свяжемся с вами.`</span>;
+  form.replaceWith(msg);
+});</code></pre>
+    </div>
+
+    <h3>Основные концепции JavaScript:</h3>
+    <div class="tech-grid">
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">🔗</span><span class="tech-badge-name">DOM</span></div>
+        <p>Document Object Model — программный интерфейс для работы с HTML-документом.</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">📡</span><span class="tech-badge-name">Events</span></div>
+        <p>Обработка событий: клик, наведение, ввод, прокрутка, загрузка страницы.</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">⚡</span><span class="tech-badge-name">Fetch API</span></div>
+        <p>Асинхронные запросы к серверу без перезагрузки страницы (AJAX).</p>
+      </div>
+      <div class="tech-badge">
+        <div class="tech-badge-top"><span class="tech-badge-icon">📦</span><span class="tech-badge-name">ES6+</span></div>
+        <p>Современный синтаксис: стрелочные функции, деструктуризация, async/await.</p>
+      </div>
+    </div>
+
+    <h2>2.4 Взаимодействие HTML, CSS и JavaScript</h2>
+    <p>Три технологии работают в связке. HTML задаёт структуру, CSS оформляет внешний вид, JavaScript добавляет поведение.</p>
+
+    <div class="info-box">
+      <strong>🔄 Принцип разделения ответственности:</strong> HTML, CSS и JS должны быть разделены в разные файлы. Это упрощает сопровождение кода, ускоряет загрузку через кэширование и позволяет нескольким разработчикам работать параллельно.
+    </div>
+
+    <h3>Роли в современном проекте:</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Технология</th><th>Роль</th><th>Файл</th></tr></thead>
+        <tbody>
+          <tr><td>HTML5</td><td>Структура и семантика</td><td>index.html</td></tr>
+          <tr><td>CSS3</td><td>Оформление, адаптивность</td><td>style.css</td></tr>
+          <tr><td>JavaScript</td><td>Интерактивность, динамика</td><td>main.js</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="page-nav">
+    <a href="theory.html">
+      <span class="page-nav-label">← Назад</span>
+      <span class="page-nav-title">Теория</span>
+    </a>
+    <a href="tools.html" class="next">
+      <span class="page-nav-label">Вперёд →</span>
+      <span class="page-nav-title">Инструменты</span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">WEB<span>.</span>INFO</div>
+      <nav class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="theory.html">Теория</a>
+        <a href="technologies.html">Технологии</a>
+        <a href="tools.html">Инструменты</a>
+        <a href="practice.html">Практика</a>
+        <a href="about.html">О проекте</a>
+      </nav>
+      <p class="footer-copy">© 2026 · Курсовая работа · Web-страницы и сайты</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
